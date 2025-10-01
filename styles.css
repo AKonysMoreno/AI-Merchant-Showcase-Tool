@@ -1268,13 +1268,19 @@ div.summary-output div.output-content#summaryWorksheetOutput {
 .figma-pro-callout::before {
     content: "⚡";
     position: absolute;
-    top: -10px;
-    left: 20px;
+    top: -12px;
+    left: 50%;
+    transform: translateX(-50%);
     background: #b19cd9;
     color: white;
     padding: 0.5rem;
     border-radius: 50%;
     font-size: 1.2rem;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 .pro-callout-content h4 {
