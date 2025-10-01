@@ -1254,6 +1254,58 @@ div.summary-output div.output-content#summaryWorksheetOutput {
     font-size: 1.2rem;
 }
 
+/* Figma Pro Callout Styles */
+.figma-pro-callout {
+    background: linear-gradient(135deg, #b19cd9 0%, #a991d3 100%);
+    border: 2px solid #a991d3;
+    border-radius: 12px;
+    padding: 1.5rem;
+    margin: 2rem 0;
+    position: relative;
+    color: white;
+}
+
+.figma-pro-callout::before {
+    content: "⚡";
+    position: absolute;
+    top: -10px;
+    left: 20px;
+    background: #faf9fc;
+    padding: 0.5rem;
+    border-radius: 50%;
+    font-size: 1.2rem;
+}
+
+.pro-callout-content h4 {
+    font-size: 1.125rem;
+    font-weight: 600;
+    color: white;
+    margin: 0 0 0.5rem 0;
+}
+
+.pro-callout-content p {
+    font-size: 0.95rem;
+    color: rgba(255, 255, 255, 0.9);
+    margin: 0 0 1rem 0;
+    line-height: 1.4;
+}
+
+.figma-pro-callout .figma-template-access {
+    margin: 0;
+    text-align: left;
+}
+
+.figma-pro-callout .figma-template-button {
+    background: white;
+    color: #b19cd9;
+    border: 2px solid white;
+}
+
+.figma-pro-callout .figma-template-button:hover {
+    background: rgba(255, 255, 255, 0.9);
+    color: #a991d3;
+}
+
 .callout-content h4 {
     color: #5a4b7c;
     font-size: 1.125rem;
