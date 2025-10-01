@@ -181,7 +181,7 @@ body {
 /* Substep Navigation Buttons */
 .substep-navigation {
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
     gap: 1.5rem;
     margin: 2rem 0;
 }
@@ -2068,7 +2068,7 @@ div.summary-output div.output-content#summaryWorksheetOutput {
     }
 }
 
-@media (max-width: 768px) {
+@media (max-width: 992px) {
     .substep-navigation {
         grid-template-columns: 1fr 1fr;
         gap: 1rem;
