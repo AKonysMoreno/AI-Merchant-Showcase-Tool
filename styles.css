@@ -1256,13 +1256,13 @@ div.summary-output div.output-content#summaryWorksheetOutput {
 
 /* Figma Pro Callout Styles */
 .figma-pro-callout {
-    background: linear-gradient(135deg, #b19cd9 0%, #a991d3 100%);
-    border: 2px solid #a991d3;
+    background: white;
+    border: 2px solid #e6e3f0;
     border-radius: 12px;
     padding: 1.5rem;
     margin: 2rem 0;
     position: relative;
-    color: white;
+    box-shadow: 0 2px 8px rgba(181, 156, 217, 0.06);
 }
 
 .figma-pro-callout::before {
@@ -1270,7 +1270,8 @@ div.summary-output div.output-content#summaryWorksheetOutput {
     position: absolute;
     top: -10px;
     left: 20px;
-    background: #faf9fc;
+    background: #b19cd9;
+    color: white;
     padding: 0.5rem;
     border-radius: 50%;
     font-size: 1.2rem;
@@ -1279,13 +1280,13 @@ div.summary-output div.output-content#summaryWorksheetOutput {
 .pro-callout-content h4 {
     font-size: 1.125rem;
     font-weight: 600;
-    color: white;
+    color: #5a4b7c;
     margin: 0 0 0.5rem 0;
 }
 
 .pro-callout-content p {
     font-size: 0.95rem;
-    color: rgba(255, 255, 255, 0.9);
+    color: #666;
     margin: 0 0 1rem 0;
     line-height: 1.4;
 }
@@ -1296,14 +1297,14 @@ div.summary-output div.output-content#summaryWorksheetOutput {
 }
 
 .figma-pro-callout .figma-template-button {
-    background: white;
-    color: #b19cd9;
-    border: 2px solid white;
+    background: #b19cd9;
+    color: white;
+    border: 2px solid #b19cd9;
 }
 
 .figma-pro-callout .figma-template-button:hover {
-    background: rgba(255, 255, 255, 0.9);
-    color: #a991d3;
+    background: #a991d3;
+    border-color: #a991d3;
 }
 
 .callout-content h4 {
