@@ -1,0 +1,687 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="AI-powered tool for Shopify partners to create merchant showcase content using smart prompts and Figma templates for LinkedIn posting.">
+    <title>AI Merchant Showcase Tool</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <div class="container">
+        <!-- Main Title -->
+        <div class="title-container">
+            <h1>AI Merchant Showcase Tool</h1>
+        </div>
+
+        <!-- Progress Bar -->
+        <div class="progress-container">
+            <div class="progress-bar">
+                <div class="progress-fill" id="progressFill"></div>
+            </div>
+            <div class="step-indicators">
+                <div class="step active" data-step="1" onclick="showStep(1)">
+                    <i class="fas fa-compass"></i>
+                    <span>Get oriented</span>
+                </div>
+                <div class="step-group">
+                    <div class="step" data-step="2" onclick="showStep(2)">
+                        <i class="fas fa-magic"></i>
+                        <span>Generate content</span>
+                    </div>
+                    <div class="substep-indicators" id="substepIndicators">
+                        <div class="substep" data-substep="2a" onclick="goToSubstep('2a')">
+                            <i class="fas fa-heading"></i>
+                            <span>Title</span>
+                        </div>
+                        <div class="substep" data-substep="2b" onclick="goToSubstep('2b')">
+                            <i class="fas fa-align-left"></i>
+                            <span>Summary</span>
+                        </div>
+                        <div class="substep" data-substep="2c" onclick="goToSubstep('2c')">
+                            <i class="fas fa-quote-right"></i>
+                            <span>Quote</span>
+                        </div>
+                        <div class="substep" data-substep="2d" onclick="goToSubstep('2d')">
+                            <i class="fas fa-images"></i>
+                            <span>Images</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="step" data-step="3" onclick="showStep(3)">
+                    <i class="fab fa-figma"></i>
+                    <span>Use the design template</span>
+                </div>
+                <div class="step" data-step="4" onclick="showStep(4)">
+                    <i class="fas fa-share-alt"></i>
+                    <span>Post on LinkedIn</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- Step 1: Get Oriented -->
+        <div class="step-content active" id="step1">
+            <div class="hero-section">
+                <div class="content-section">
+                    <div class="orientation-section">
+                        <div class="step-header-organized">
+                            <h2 class="main-heading">Get oriented</h2>
+                            <div class="heading-underline"></div>
+                            <div class="organized-description">
+                                <p>Case studies are a top request from Shopify partners, and for good reason! They're a great way to show your value in working with Shopify merchants. But case studies also take a bit of time to build, and sometimes you need social proof faster.</p>
+                                
+                                <p>That's where this <strong>merchant showcase tool</strong> comes in.</p>
+                                
+                                <p>This tool is a low-lift way to build content that shows the value of your work with merchants on Shopify. It includes the same impactful value points and details about the work you did as a full case study, but in a more bite-sized format.</p>
+                                
+                                <p><i class="fas fa-share-alt"></i> The output is a social post featuring a carousel of polished content cards you can promote through LinkedIn.</p>
+                                
+                                <div class="disclaimer">
+                                    <p><strong>Reminder:</strong> Make sure you have your merchant's approval of your content before posting. Shopify is not liable for any content created using this tool.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="guidelines-section">
+                        <h2>Guidelines</h2>
+                        <div class="guideline-item">
+                            <div class="guideline-icon">
+                                <i class="fas fa-user-check"></i>
+                            </div>
+                            <div class="guideline-content">
+                                <h3>Build your content, and own it.</h3>
+                                <p>This resource is entirely on you! Shopify won't need to review it, nor will we promote this content on our channels.</p>
+                            </div>
+                        </div>
+                        
+                        <div class="guideline-item">
+                            <div class="guideline-icon">
+                                <i class="fas fa-star"></i>
+                            </div>
+                            <div class="guideline-content">
+                                <h3>Give the details your all.</h3>
+                                <p>There are only three elements needed to create merchant showcase content. This content type is designed to have the highest impact with the lowest effort, but you'll need to include all elements for it to be effective. Please don't cut corners!</p>
+                            </div>
+                        </div>
+                        
+                        <div class="guideline-item">
+                            <div class="guideline-icon">
+                                <i class="fas fa-handshake"></i>
+                            </div>
+                            <div class="guideline-content">
+                                <h3>Keep your merchants in the loop.</h3>
+                                <p>We're simply providing this template as a resource. You'll be responsible for making sure that any merchants you feature have your approval.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="process-overview">
+                        <h2>How it works</h2>
+                        <p>The design template has four content areas for you to fill in:</p>
+                        
+                        <div class="content-areas">
+                            <div class="content-area">
+                                <div class="area-number">1</div>
+                                <div class="area-text">
+                                    <h4>A title</h4>
+                                    <p>Clear, compelling headline about the merchant's success</p>
+                                </div>
+                            </div>
+                            <div class="content-area">
+                                <div class="area-number">2</div>
+                                <div class="area-text">
+                                    <h4>A summary of the work you did</h4>
+                                    <p>Brief overview of your services and approach</p>
+                                </div>
+                            </div>
+                            <div class="content-area">
+                                <div class="area-number">3</div>
+                                <div class="area-text">
+                                    <h4>1-3 metrics</h4>
+                                    <p>Quantifiable results that demonstrate impact</p>
+                                </div>
+                            </div>
+                            <div class="content-area">
+                                <div class="area-number">4</div>
+                                <div class="area-text">
+                                    <h4>A quote from the merchant</h4>
+                                    <p>Testimonial that validates your work</p>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="final-instruction">
+                            <div class="instruction-icon">
+                                <i class="fas fa-rocket"></i>
+                            </div>
+                            <div class="final-instruction-content">
+                                <h3>Ready to get started?</h3>
+                                <p>Use the provided AI prompts and guidelines to get your content ready, then paste it into the template and share on LinkedIn.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="button-container">
+                        <button class="cta-button" onclick="nextStep()">
+                            Get started <i class="fas fa-arrow-right"></i>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Step 2: Generate Content Main -->
+        <div class="step-content" id="step2">
+            <div class="content-section">
+                <div class="step-header-organized">
+                    <h2 class="main-heading">Generate content for your post</h2>
+                    <div class="heading-underline"></div>
+                    <p class="organized-description">Use these AI prompts to create copy for your title and project summary. Then, check to make sure your quote fits the character count and gather the images you'll need.</p>
+                </div>
+
+                <div class="substep-navigation">
+                    <div class="substep-button" onclick="goToSubstep('2a')">
+                        <div class="substep-icon">
+                            <i class="fas fa-heading"></i>
+                        </div>
+                        <h3>Write your title</h3>
+                        <p>Generate a compelling headline about the merchant's success.</p>
+                    </div>
+
+                    <div class="substep-button" onclick="goToSubstep('2b')">
+                        <div class="substep-icon">
+                            <i class="fas fa-align-left"></i>
+                        </div>
+                        <h3>Write your summary</h3>
+                        <p>Create a summary of your work and impact.</p>
+                    </div>
+
+                    <div class="substep-button" onclick="goToSubstep('2c')">
+                        <div class="substep-icon">
+                            <i class="fas fa-quote-right"></i>
+                        </div>
+                        <h3>Check your quote's length</h3>
+                        <p>Make sure your merchant quote fits the template.</p>
+                    </div>
+
+                    <div class="substep-button" onclick="goToSubstep('2d')">
+                        <div class="substep-icon">
+                            <i class="fas fa-images"></i>
+                        </div>
+                        <h3>Images</h3>
+                        <p>Gather the images you'll need for the template.</p>
+                    </div>
+                </div>
+
+                <div class="step-navigation">
+                    <button class="nav-button prev" onclick="prevStep()">
+                        <i class="fas fa-arrow-left"></i> Back
+                    </button>
+                    <button class="nav-button next" onclick="showStep(3)">
+                        Skip to the design template <i class="fas fa-arrow-right"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Step 2a: Generate Title -->
+        <div class="step-content" id="step2a">
+            <div class="content-section">
+                <div class="step-header-organized">
+                    <h2 class="main-heading">Write your title</h2>
+                    <div class="heading-underline"></div>
+                    <p class="organized-description">Start by drafting a title that describes what the partnership was about. Complete the two actions below.</p>
+                </div>
+
+                <!-- Action 1: AI Prompt -->
+                <div class="action-section">
+                    <h4 class="action-title">Action 1: Input this prompt into your AI tool.</h4>
+                    <p class="action-tip">We recommend using ChatGPT or Claude.</p>
+                    
+                    <div class="prompt-container">
+                        <div class="prompt-content" id="titlePrompt">Write a short headline for a case study featuring a brand and a partner who helped them grow their business on Shopify.
+
+I'd like you to study these examples and learn their tone and formatting. You'll then want to write the new title in a similar style after I give you information about the new case study. Do not exceed 20 words.
+
+&lt;Example 1&gt;
+BARK Leads the Pack With 8% Holiday Subscription Growth After Switching to Shopify
+
+&lt;Example 2&gt;
+Buck Mason Expands to 50 Stores and Tailors Ecommerce Operations With Shopify
+
+&lt;Example 3&gt;
+How RunDTC Unified Steve Madden's Global Digital Presence on Shopify, Increasing Conversion by 16%
+
+&lt;Example 4&gt;
+How Molsoft Unified Groupe Marcelle's Brands on Shopify and Delivered 32% Sales Growth
+
+&lt;Example 5&gt;
+How CarBahn Tripled Growth by Migrating from WooCommerce to Shopify
+
+&lt;Example 6&gt;
+ATTITUDE Living launches multi-country stores on Shopify, increasing new customers by 9%
+
+When you understand, say "Please input the information about working with the merchant from your worksheet, and I'll draft a title for your lite case study."</div>
+                        <button class="copy-prompt-button" onclick="copyPrompt('titlePrompt')">
+                            <i class="fas fa-copy"></i> Copy to clipboard
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Action 2: Worksheet -->
+                <div class="action-section">
+                    <h4 class="action-title">Action 2: Answer these questions, and input them into your tool.</h4>
+                    
+                    <div class="worksheet-container">
+                        <div class="worksheet-form">
+                            <div class="form-group">
+                                <label for="merchantName">Merchant's name:</label>
+                                <input type="text" id="merchantName" name="merchantName" placeholder="Enter merchant's name">
+                            </div>
+
+                            <div class="form-group">
+                                <label for="partnerName">Partner's name:</label>
+                                <input type="text" id="partnerName" name="partnerName" placeholder="Enter partner's name">
+                            </div>
+
+                            <div class="form-group">
+                                <label for="featuredStat">Featured stat (pick the strongest one):</label>
+                                <input type="text" id="featuredStat" name="featuredStat" placeholder="Examples: '32% sales growth', '8% subscription growth'">
+                            </div>
+
+                            <div class="form-group">
+                                <label for="featuredUpgrade">Featured upgrade as a result of moving to Shopify:</label>
+                                <input type="text" id="featuredUpgrade" name="featuredUpgrade" placeholder="Example: unified global stores, opened new channels" class="tall-input">
+                            </div>
+                        </div>
+
+                        <div class="worksheet-output" style="text-align: left;">
+                            <h4>Copy your answers into your AI tool:</h4>
+                            <div class="output-content" id="worksheetOutput" style="text-align: left !important; direction: ltr !important; justify-content: flex-start !important; align-items: flex-start !important;">
+                                <div style="text-align: left !important; width: 100%;">Fill out the worksheet to generate your formatted answers.</div>
+                            </div>
+                            <button class="copy-output-button" onclick="copyWorksheetOutput()" id="copyWorksheetBtn" disabled>
+                                <i class="fas fa-copy"></i> Copy to clipboard
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="step-navigation">
+                    <button class="nav-button prev" onclick="goToSubstep('2')">
+                        <i class="fas fa-arrow-left"></i> Back to content options
+                    </button>
+                    <button class="nav-button next" onclick="goToSubstep('2b')">
+                        Next: Write your summary <i class="fas fa-arrow-right"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Step 2b: Generate Summary -->
+        <div class="step-content" id="step2b">
+            <div class="content-section">
+                <div class="step-header-organized">
+                    <h2 class="main-heading">Write your summary</h2>
+                    <div class="heading-underline"></div>
+                    <p class="organized-description">Next, draft a summary of the work you did with the merchant on Shopify and how it created value for them. Complete the two actions below.</p>
+                </div>
+
+                <!-- Action 1: AI Prompt -->
+                <div class="action-section">
+                    <h4 class="action-title">Action 1: Input this additional prompt into your AI tool.</h4>
+                    
+                    <div class="prompt-container">
+                        <div class="prompt-content" id="summaryPrompt">You are a former journalist at Time magazine, and you've had a few articles published in The New Yorker. You know how to write very well, keeping your copy professional and educated but not corporate, hyperbolic, or jargon-filled. Instead, you aim for clarity in getting your point across. You've moved from your career as a journalist and now primarily write case studies that are used by a big tech company to market to merchants who are looking for a new commerce platform but want a partner to help them.
+
+Your task this time is to write a short summary that describes how a partner used Shopify's technology to improve the commerce strategy and operations of a brand they worked with. Do this in one to three sentences only, using roughly 50 words (okay to go under, but don't exceed by much.)
+
+I'd like you to study these examples and learn their voice and tone. You'll then want to write the new summary in a similar style.
+
+This is very important: only use the information provided when drafting the summary. Do not pull information from any other source, including the internet, your own databases, or any made up facts or figures that you need but aren't given.
+
+&lt;Example 1&gt;
+1970s-inspired lifestyle brand Aviator Nation transformed their retail operations by unifying fragmented systems onto Shopify's commerce platform. By replacing separate ecommerce and point of sale solutions with Shopify's integrated ecosystem, they eliminated customer friction across channels, gained complete visibility into shopping behaviors, and rapidly scaled to process thousands of daily transactions at stores and events.
+
+&lt;Example 2&gt;
+Premium audio retailer Audio Advice shed the technical limitations of Magento by partnering with Netalico on a seamless migration to Shopify, which delivered dramatically faster page loads and intuitive product discovery tools for complex technical purchases. This transformation empowered their marketing team with newfound content control, fueling substantial business growth while enhancing the customer experience across all touchpoints.
+
+&lt;Example 3&gt;
+Global athletic apparel leader Lids partnered with Arctic Grey to transform their complex multi-brand ecosystem by implementing Shopify across eight commerce websites and connecting them seamlessly with over 1,200 retail locations. Arctic Grey developed tailored solutions for each unique brand—including a revolutionary hat customizer powering both online sales and in-store kiosks—fundamentally transforming how customers interact with the Lids portfolio worldwide.
+
+&lt;Example 4&gt;
+Premium haircare brand Chaz Dean partnered with Zaelab to transform their fragmented digital experience by migrating from Magento to a unified Shopify platform. By consolidating multiple product lines into a single cohesive site and implementing personalized shopping experiences through interactive product quizzes, the brand now delivers the same consultative approach online that defined their acclaimed salons, while significantly streamlining their operations.
+
+&lt;Example 5&gt;
+Performance insole pioneer Superfeet partnered with Arcadia Digital and CQL to transform their digital presence on Shopify, reimagining how athletes discover and shop for biomechanical support. The migration delivered a content-rich platform with guided selling tools and localized experiences across global markets, while empowering their internal teams to create and launch campaigns without technical bottlenecks.
+
+When you understand, say "Please input the information about working with the merchant from your worksheet, and I'll draft a summary for your lite case study."</div>
+                        <button class="copy-prompt-button" onclick="copyPrompt('summaryPrompt')">
+                            <i class="fas fa-copy"></i> Copy to clipboard
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Action 2: Full Width Worksheet -->
+                <div class="action-section">
+                    <h4 class="action-title">Action 2: Answer these five questions, and input them into your tool.</h4>
+                    
+                    <div class="summary-worksheet" style="margin-top: 1.5rem;">
+                        <div class="form-group">
+                            <label for="brandHighlight">What merchant do you want to highlight? What products do they sell and what do they care about?</label>
+                            <textarea id="brandHighlight" name="brandHighlight" rows="3" placeholder="Describe the merchant, their products, and their values."></textarea>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="importantWork">What's the single most important thing that you want to convey about the work you did with this brand?</label>
+                            <textarea id="importantWork" name="importantWork" rows="3" placeholder="Describe what the merchant was trying to achieve and how you made it happen."></textarea>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="shopifyPlatform">How did Shopify's platform make this possible?</label>
+                            <textarea id="shopifyPlatform" name="shopifyPlatform" rows="3" placeholder="Explain the specific Shopify features or capabilities that led to the merchant's success."></textarea>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="partnerExpertise">What expertise did you bring as their partner?</label>
+                            <textarea id="partnerExpertise" name="partnerExpertise" rows="3" placeholder="Describe your unique skills, approach, or specialized knowledge."></textarea>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="previousPlatform">What was their previous platform (if they're comfortable sharing)?</label>
+                            <input type="text" id="previousPlatform" name="previousPlatform" placeholder="Examples: Magento (Adobe Commerce), WooCommerce, customer solution, etc.">
+                        </div>
+                    </div>
+
+                    <div class="summary-output" style="text-align: left;">
+                        <h4>Copy your answers into your AI tool:</h4>
+                            <div class="output-content" id="summaryWorksheetOutput" style="text-align: left !important; direction: ltr !important; justify-content: flex-start !important; align-items: flex-start !important;">
+                                <div style="text-align: left !important; width: 100%;">Fill out the worksheet to generate your formatted answers.</div>
+                            </div>
+                        <button class="copy-output-button" onclick="copySummaryWorksheetOutput()" id="copySummaryWorksheetBtn" disabled>
+                            <i class="fas fa-copy"></i> Copy to clipboard
+                        </button>
+                    </div>
+                </div>
+
+                <div class="step-navigation">
+                    <button class="nav-button prev" onclick="goToSubstep('2a')">
+                        <i class="fas fa-arrow-left"></i> Back
+                    </button>
+                    <button class="nav-button next" onclick="goToSubstep('2c')">
+                        Next: Check your quote <i class="fas fa-arrow-right"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Step 2c: Check Quote Length -->
+        <div class="step-content" id="step2c">
+            <div class="content-section">
+                <div class="step-header-organized">
+                    <h2 class="main-heading">Check your quote's length</h2>
+                    <div class="heading-underline"></div>
+                    <p class="organized-description">Make sure your merchant quote fits within the character limits for the template design.</p>
+                </div>
+
+                <div class="quote-checker">
+                    <div class="form-group">
+                        <textarea id="merchantQuote" name="merchantQuote" rows="4" placeholder="Paste the quote from your merchant here..." oninput="checkQuoteLength()"></textarea>
+                    </div>
+                    
+                    <div class="quote-stats" id="quoteStats">
+                        <div class="stat-item">
+                            <span class="stat-label">Words:</span>
+                            <span class="stat-value" id="wordCount">0</span>
+                            <span class="stat-limit">/ 35</span>
+                        </div>
+                    </div>
+
+                    <div class="quote-status" id="quoteStatus" style="display: none;">
+                    </div>
+
+                    <div class="tip-section">
+                        <h4>Tips for great quotes:</h4>
+                        <ul>
+                            <li>Keep it under 35 words for best template fit</li>
+                            <li>Focus on specific results or transformations</li>
+                            <li>Include the merchant's voice and personality</li>
+                            <li>Mention concrete benefits they experienced</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="step-navigation">
+                    <button class="nav-button prev" onclick="goToSubstep('2b')">
+                        <i class="fas fa-arrow-left"></i> Back
+                    </button>
+                    <button class="nav-button next" onclick="goToSubstep('2d')">
+                        Next: Gather images <i class="fas fa-arrow-right"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Step 2d: Gather Images -->
+        <div class="step-content" id="step2d">
+            <div class="content-section">
+                <div class="step-header-organized">
+                    <h2 class="main-heading">Gather your images</h2>
+                    <div class="heading-underline"></div>
+                    <p class="organized-description">You'll need to add a few images to the design template. Gather these now so you're ready to drop them in when the time comes:</p>
+                </div>
+
+                <div class="images-checklist">
+                    <div class="image-category">
+                        <h4>Two logos for your partner agency</h4>
+                        <div class="callout-bubble">
+                            <i class="fas fa-info-circle"></i>
+                            .SVG file format required
+                        </div>
+                        <div class="checklist-items">
+                            <label class="checkbox-item">
+                                <input type="checkbox" id="partnerBlackLogo">
+                                <span class="checkmark"></span>
+                                <span class="checkbox-label">One in all black</span>
+                            </label>
+                            <label class="checkbox-item">
+                                <input type="checkbox" id="partnerWhiteLogo">
+                                <span class="checkmark"></span>
+                                <span class="checkbox-label">One in all white</span>
+                            </label>
+                        </div>
+                    </div>
+
+                    <div class="image-category">
+                        <h4>Logo for the merchant</h4>
+                        <div class="callout-bubble">
+                            <i class="fas fa-info-circle"></i>
+                            .SVG file format required
+                        </div>
+                        <div class="checklist-items">
+                            <label class="checkbox-item">
+                                <input type="checkbox" id="merchantWhiteLogo">
+                                <span class="checkmark"></span>
+                                <span class="checkbox-label">One in all white</span>
+                            </label>
+                        </div>
+                    </div>
+
+                    <div class="image-category">
+                        <h4>One merchant brand image</h4>
+                        <div class="checklist-items">
+                            <label class="checkbox-item">
+                                <input type="checkbox" id="merchantBrandImage">
+                                <span class="checkmark"></span>
+                                <span class="checkbox-label">Either 1080x1530px or 560x560px sizing.</span>
+                            </label>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="step-navigation">
+                    <button class="nav-button prev" onclick="goToSubstep('2c')">
+                        <i class="fas fa-arrow-left"></i> Back
+                    </button>
+                    <button class="nav-button next" onclick="nextStep()">
+                        Next: Use the design template <i class="fas fa-arrow-right"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Step 3: Figma Instructions -->
+        <div class="step-content" id="step3">
+            <div class="content-section">
+                <div class="step-header-organized">
+                    <h2 class="main-heading priority-heading">Design your content</h2>
+                    <div class="heading-underline"></div>
+                    <p class="organized-description priority-description">The design template for the merchant showcase tool lives in Figma.<br><br>It's built so that all you need to do is copy and paste the content you just generated, then add your metrics and brand image directly into the template. From there, you'll export and post to LinkedIn.</p>
+                </div>
+
+                <!-- Figma Callout Box -->
+                <div class="figma-callout">
+                    <div class="callout-content">
+                        <h4>Never used Figma? No problem.</h4>
+                        <p style="margin-bottom: 1rem;">The basic version of Figma is free for everyone. Create an account by simply logging in with your email. From there, download the template and add it into your Figma files.</p>
+                        <p>The template has clear, step-by-step instructions for where and what to click. You can also follow along with this <strong>video walkthrough</strong>:</p>
+                        
+                        <video class="figma-tutorial-video" controls>
+                            <source src="Guided Figma Merchant Showcase Tutorial.mp4" type="video/mp4">
+                            Your browser does not support the video tag.
+                        </video>
+                    </div>
+                </div>
+
+                <div class="figma-template-access">
+                    <a href="#" class="figma-template-button" onclick="downloadFigmaTemplate(event)">
+                        <i class="fas fa-download"></i> Download the figma template
+                    </a>
+                </div>
+
+                <div class="step-navigation">
+                    <button class="nav-button prev" onclick="prevStep()">
+                        <i class="fas fa-arrow-left"></i> Back
+                    </button>
+                    <button class="nav-button next" onclick="nextStep()">
+                        Next: Post on LinkedIn <i class="fas fa-arrow-right"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Step 4: LinkedIn Instructions -->
+        <div class="step-content" id="step4">
+            <div class="content-section">
+                <div class="step-header-organized">
+                    <h2 class="main-heading">Post on LinkedIn</h2>
+                    <div class="heading-underline"></div>
+                    <p class="organized-description">Once you've created your content cards in Figma and exported them as PDFs, follow these actions to build your post and share on LinkedIn.</p>
+                </div>
+
+                <!-- Action 1: Draft Post Caption -->
+                <div class="action-section">
+                    <h4 class="action-title">Action 1: Input this prompt into your AI tool.</h4>
+                    
+                    <div class="prompt-container">
+                        <div class="prompt-content" id="linkedinPrompt">Now you need to draft a one sentence description for a LinkedIn post that will showcase this case study. 
+
+I'd like you to study these examples and learn their voice and tone. You'll then want to write the new LinkedIn body copy sentence in a similar style.
+
+&lt;Example 1&gt;
+Don't let fragmented systems slow you down. Learn how we helped Aviator Nation unify their online and in-store channels on Shopify.
+
+&lt;Example 2&gt;
+Shed the limitations of your legacy platform. Learn how we migrated Audio Advice to Shopify, building intuitive product discovery tools for complex technology purchases.
+
+&lt;Example 3&gt;
+Manage multiple brands without losing what makes each unique. Learn how we helped Lids transform their multi-brand ecosystem and build bespoke customization features on Shopify.
+
+&lt;Example 4&gt;
+Don't lose your brand identity because of rigid technology. Learn how we helped Chaz Dean bring their signature consultative approach online by migrating to Shopify.
+
+&lt;Example 5&gt;
+High performance products call for innovative shopping experiences. Learn how we helped Superfeet build guided selling tools and localize across global markets on Shopify.
+
+Applying what you've learned from these examples, take the earlier input for "What's the single most important thing that you want to convey about the work you did with this brand?" and turn it into the body copy for the post. Don't exceed 175 characters.</div>
+                        <button class="copy-prompt-button" onclick="copyPrompt('linkedinPrompt')">
+                            <i class="fas fa-copy"></i> Copy to clipboard
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Action 2: Build LinkedIn Post -->
+                <div class="action-section">
+                    <h4 class="action-title">Action 2: Build your post on LinkedIn.</h4>
+                    
+                    <div class="linkedin-steps">
+                        <ol class="numbered-steps">
+                            <li>Navigate to LinkedIn</li>
+                            <li>Click "Start a post" on your profile</li>
+                            <li>In the post editor, click the "+" (plus) icon to find more post options</li>
+                            <li>Select "Add a document"</li>
+                            <li>Upload your PDF files in this card order: Title, Summary, Image, Stats, Quote, Logos</li>
+                            <li>Add "[Merchant name] x [Your agency's name] showcase" as the title for the document</li>
+                            <li>Paste in the caption you generated in your AI tool</li>
+                            <li>Click "Post" to share with your network</li>
+                        </ol>
+                    </div>
+                </div>
+
+                <div class="disclaimer">
+                    <p><strong>Reminder:</strong> Make sure you have your merchant's approval of your content before posting. Shopify is not liable for any content created using this tool.</p>
+                </div>
+
+                <div class="step-navigation">
+                    <button class="nav-button prev" onclick="prevStep()">
+                        <i class="fas fa-arrow-left"></i> Back
+                    </button>
+                    <button class="nav-button next" onclick="nextStep()">
+                        I'm done <i class="fas fa-check"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Step 5: Completion -->
+        <div class="step-content" id="step5">
+            <div class="content-section">
+                <div class="completion-section">
+                    <div class="completion-header">
+                        <div class="celebration-icon">🎉</div>
+                        <h1 class="completion-title">Congratulations!</h1>
+                        <div class="completion-underline"></div>
+                    </div>
+                    
+                    <div class="completion-content">
+                        <p class="completion-message">You've successfully created merchant showcase content using AI and Figma!</p>
+                    </div>
+
+                    <div class="completion-actions">
+                        <button class="completion-button" onclick="showStep(1)">
+                            Start over
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modals -->
+    <div class="modal" id="copyModal">
+        <div class="modal-content">
+            <span class="close" onclick="closeCopyModal()">&times;</span>
+            <h3>Your generated copy</h3>
+            <div class="modal-copy" id="modalCopyContent"></div>
+            <button class="copy-button" onclick="copyToClipboard()">
+                <i class="fas fa-copy"></i> Copy to clipboard
+            </button>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
