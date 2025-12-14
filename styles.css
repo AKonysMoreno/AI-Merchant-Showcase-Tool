@@ -32,10 +32,19 @@ body {
     text-align: center;
 }
 
+.title-container .eyebrow {
+    font-size: 0.75rem;
+    font-weight: 600;
+    letter-spacing: 0.1em;
+    color: #6a5d88;
+    margin-bottom: 0.75rem;
+    text-transform: uppercase;
+}
+
 .title-container h1 {
     font-size: 2rem;
     font-weight: 700;
-    color: #5a4b7c;
+    color: #3d2f5c;
     margin: 0;
 }
 
@@ -59,7 +68,7 @@ body {
 
 .progress-fill {
     height: 100%;
-    background: #b19cd9;
+    background: #8b6fb8;
     width: 25%;
     transition: width 0.5s ease;
     border-radius: 2px;
@@ -84,17 +93,17 @@ body {
     display: flex;
     flex-direction: column;
     align-items: center;
-    color: #8b7fa8;
+    color: #6a5d88;
     transition: all 0.3s ease;
     cursor: pointer;
 }
 
 .step.active {
-    color: #5a4b7c;
+    color: #3d2f5c;
 }
 
 .step.completed {
-    color: #b19cd9;
+    color: #8b6fb8;
 }
 
 .step i {
@@ -109,11 +118,11 @@ body {
 .step.active i {
     background: #e6e3f0;
     transform: scale(1.1);
-    color: #5a4b7c;
+    color: #3d2f5c;
 }
 
 .step.completed i {
-    background: #b19cd9;
+    background: #8b6fb8;
     color: white;
 }
 
@@ -152,7 +161,7 @@ body {
     height: 30px;
     border-radius: 50%;
     background: #e6e3f0;
-    color: #5a4b7c;
+    color: #3d2f5c;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -162,7 +171,7 @@ body {
 }
 
 .substep.active i {
-    background: #b19cd9;
+    background: #8b6fb8;
     color: white;
 }
 
@@ -181,8 +190,8 @@ body {
 /* Substep Navigation Buttons */
 .substep-navigation {
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr 1fr;
-    gap: 1.5rem;
+    grid-template-columns: 1fr;
+    gap: 1rem;
     margin: 2rem 0;
 }
 
@@ -190,42 +199,46 @@ body {
     background: white;
     border: 2px solid #e6e3f0;
     border-radius: 12px;
-    padding: 2rem;
-    text-align: center;
+    padding: 1rem 1.5rem;
+    text-align: left;
     cursor: pointer;
     transition: all 0.3s ease;
+    display: flex;
+    align-items: center;
+    gap: 1rem;
 }
 
 .substep-button:hover {
-    border-color: #b19cd9;
+    border-color: #8b6fb8;
     transform: translateY(-2px);
     box-shadow: 0 6px 20px rgba(181, 156, 217, 0.15);
 }
 
 .substep-button .substep-icon {
-    width: 50px;
-    height: 50px;
+    width: 40px;
+    height: 40px;
     border-radius: 50%;
     background: #f8fafc;
-    color: #b19cd9;
+    color: #8b6fb8;
     display: flex;
     align-items: center;
     justify-content: center;
-    font-size: 1.25rem;
-    margin: 0 auto 1rem;
+    font-size: 1rem;
+    margin: 0;
+    flex-shrink: 0;
     transition: all 0.3s ease;
 }
 
 .substep-button:hover .substep-icon {
-    background: #b19cd9;
+    background: #8b6fb8;
     color: white;
 }
 
 .substep-button h3 {
-    font-size: 1.25rem;
+    font-size: 1.1rem;
     font-weight: 600;
     color: #2d2d2d;
-    margin: 0 0 0.5rem;
+    margin: 0;
 }
 
 .substep-button p {
@@ -258,7 +271,7 @@ body {
 
 .stat-label {
     font-weight: 600;
-    color: #5a4b7c;
+    color: #3d2f5c;
 }
 
 .stat-value {
@@ -297,7 +310,7 @@ body {
 
 .quote-status.info {
     background: #e6e3f0;
-    color: #5a4b7c;
+    color: #3d2f5c;
 }
 
 .quote-status div {
@@ -315,7 +328,7 @@ body {
 }
 
 .tip-section h4 {
-    color: #5a4b7c;
+    color: #3d2f5c;
     margin: 0 0 1rem;
 }
 
@@ -358,7 +371,7 @@ body {
 .hero-section h1 {
     font-size: 2.25rem;
     font-weight: 700;
-    color: #5a4b7c;
+    color: #3d2f5c;
     margin-bottom: 1rem;
     text-align: center;
 }
@@ -398,7 +411,7 @@ body {
 .feature-icon {
     width: 80px;
     height: 80px;
-    background: #b19cd9;
+    background: #8b6fb8;
     border-radius: 50%;
     display: flex;
     align-items: center;
@@ -474,7 +487,7 @@ body {
 .guideline-icon {
     width: 50px;
     height: 50px;
-    background: #b19cd9;
+    background: #8b6fb8;
     border-radius: 50%;
     display: flex;
     align-items: center;
@@ -545,7 +558,7 @@ body {
 .area-number {
     width: 40px;
     height: 40px;
-    background: #b19cd9;
+    background: #8b6fb8;
     color: white;
     border-radius: 50%;
     display: flex;
@@ -573,7 +586,7 @@ body {
 /* Final Instruction Section */
 .final-instruction {
     background: linear-gradient(135deg, #f8f7fc 0%, #e8e5f3 100%);
-    border: 2px solid #b19cd9;
+    border: 2px solid #8b6fb8;
     border-radius: 12px;
     padding: 1.5rem;
     margin: 2rem 0 1rem 0;
@@ -585,7 +598,7 @@ body {
 }
 
 .instruction-icon {
-    background: #b19cd9;
+    background: #8b6fb8;
     width: 40px;
     height: 40px;
     border-radius: 50%;
@@ -611,7 +624,7 @@ body {
 }
 
 .final-instruction p {
-    color: #5a4b7c;
+    color: #3d2f5c;
     font-size: 1rem;
     font-weight: 500;
     line-height: 1.6;
@@ -627,7 +640,7 @@ body {
 .generation-subheader {
     font-size: 1.5rem;
     font-weight: 600;
-    color: #5a4b7c;
+    color: #3d2f5c;
     margin-bottom: 1.5rem;
     padding-bottom: 0.5rem;
     border-bottom: 2px solid #e6e3f0;
@@ -685,7 +698,7 @@ body {
 }
 
 .copy-prompt-button {
-    background: #9a7fc7;
+    background: #7a5fa7;
     color: white;
     border: none;
     padding: 0.75rem 1.5rem;
@@ -701,7 +714,7 @@ body {
 }
 
 .copy-prompt-button:hover {
-    background: #8a6fb8;
+    background: #6a4f98;
 }
 
 /* Worksheet Styles */
@@ -724,7 +737,7 @@ body {
 .worksheet-output h4 {
     font-size: 1.125rem;
     font-weight: 600;
-    color: #5a4b7c;
+    color: #3d2f5c;
     margin-bottom: 1.5rem;
 }
 
@@ -775,7 +788,7 @@ div.summary-output div.output-content#summaryWorksheetOutput {
 }
 
 .copy-output-button {
-    background: #9a7fc7;
+    background: #7a5fa7;
     color: white;
     border: none;
     padding: 0.75rem 1.5rem;
@@ -791,7 +804,7 @@ div.summary-output div.output-content#summaryWorksheetOutput {
 }
 
 .copy-output-button:hover {
-    background: #8a6fb8;
+    background: #6a4f98;
 }
 
 .copy-output-button:disabled {
@@ -827,7 +840,7 @@ div.summary-output div.output-content#summaryWorksheetOutput {
 .summary-output h4 {
     font-size: 1.125rem;
     font-weight: 600;
-    color: #5a4b7c;
+    color: #3d2f5c;
     margin-bottom: 1.5rem;
 }
 
@@ -892,7 +905,7 @@ div.summary-output div.output-content#summaryWorksheetOutput {
 .step-number {
     width: 60px;
     height: 60px;
-    background: #b19cd9;
+    background: #8b6fb8;
     color: white;
     border-radius: 50%;
     display: flex;
@@ -925,7 +938,7 @@ div.summary-output div.output-content#summaryWorksheetOutput {
 
 /* CTA Button */
 .cta-button {
-    background: #9a7fc7;
+    background: #7a5fa7;
     color: white;
     border: none;
     padding: 1rem 2rem;
@@ -940,7 +953,7 @@ div.summary-output div.output-content#summaryWorksheetOutput {
 }
 
 .cta-button:hover {
-    background: #8a6fb8;
+    background: #6a4f98;
     transform: translateY(-1px);
     box-shadow: 0 6px 16px rgba(154, 127, 199, 0.25);
 }
@@ -1012,7 +1025,7 @@ div.summary-output div.output-content#summaryWorksheetOutput {
 .heading-underline {
     width: 100%;
     height: 4px;
-    background: #b19cd9;
+    background: #8b6fb8;
     margin-bottom: 2rem;
     border-radius: 2px;
 }
@@ -1076,7 +1089,7 @@ div.summary-output div.output-content#summaryWorksheetOutput {
 .form-group select:focus,
 .form-group textarea:focus {
     outline: none;
-    border-color: #b19cd9;
+    border-color: #8b6fb8;
     box-shadow: 0 0 0 3px rgba(181, 156, 217, 0.1);
 }
 
@@ -1094,7 +1107,7 @@ div.summary-output div.output-content#summaryWorksheetOutput {
 /* Figma Callout Styles */
 .figma-callout {
     background: linear-gradient(135deg, #f8fafc 0%, #e6e3f0 100%);
-    border: 2px solid #b19cd9;
+    border: 2px solid #8b6fb8;
     border-radius: 12px;
     padding: 1.5rem;
     margin: 2rem 0;
@@ -1126,7 +1139,7 @@ div.summary-output div.output-content#summaryWorksheetOutput {
 .completion-title {
     font-size: 3rem;
     font-weight: 700;
-    color: #b19cd9;
+    color: #8b6fb8;
     margin-bottom: 1rem;
     margin-top: 0;
 }
@@ -1134,7 +1147,7 @@ div.summary-output div.output-content#summaryWorksheetOutput {
 .completion-underline {
     width: 100px;
     height: 4px;
-    background: #b19cd9;
+    background: #8b6fb8;
     margin: 0 auto 2rem;
     border-radius: 2px;
 }
@@ -1162,7 +1175,7 @@ div.summary-output div.output-content#summaryWorksheetOutput {
 }
 
 .completion-button {
-    background: #b19cd9;
+    background: #8b6fb8;
     color: white;
     border: none;
     padding: 1rem 2rem;
@@ -1175,7 +1188,7 @@ div.summary-output div.output-content#summaryWorksheetOutput {
 }
 
 .completion-button:hover {
-    background: #a991d3;
+    background: #8871b3;
     transform: translateY(-2px);
     box-shadow: 0 4px 12px rgba(181, 156, 217, 0.3);
 }
@@ -1207,7 +1220,7 @@ div.summary-output div.output-content#summaryWorksheetOutput {
     position: absolute;
     left: 0;
     top: 0.75rem;
-    background: #b19cd9;
+    background: #8b6fb8;
     color: white;
     width: 2rem;
     height: 2rem;
@@ -1221,7 +1234,7 @@ div.summary-output div.output-content#summaryWorksheetOutput {
 
 .figma-template-button {
     display: inline-block;
-    background: #b19cd9;
+    background: #8b6fb8;
     color: white;
     text-decoration: none;
     padding: 1rem 2rem;
@@ -1234,7 +1247,7 @@ div.summary-output div.output-content#summaryWorksheetOutput {
 }
 
 .figma-template-button:hover {
-    background: #a991d3;
+    background: #8871b3;
     transform: translateY(-2px);
     box-shadow: 0 4px 12px rgba(181, 156, 217, 0.3);
 }
@@ -1271,7 +1284,7 @@ div.summary-output div.output-content#summaryWorksheetOutput {
     top: -12px;
     left: 50%;
     transform: translateX(-50%);
-    background: #b19cd9;
+    background: #8b6fb8;
     color: white;
     padding: 0.5rem;
     border-radius: 50%;
@@ -1286,7 +1299,7 @@ div.summary-output div.output-content#summaryWorksheetOutput {
 .pro-callout-content h4 {
     font-size: 1.125rem;
     font-weight: 600;
-    color: #5a4b7c;
+    color: #3d2f5c;
     margin: 0 0 0.5rem 0;
 }
 
@@ -1303,18 +1316,18 @@ div.summary-output div.output-content#summaryWorksheetOutput {
 }
 
 .figma-pro-callout .figma-template-button {
-    background: #b19cd9;
+    background: #8b6fb8;
     color: white;
-    border: 2px solid #b19cd9;
+    border: 2px solid #8b6fb8;
 }
 
 .figma-pro-callout .figma-template-button:hover {
-    background: #a991d3;
-    border-color: #a991d3;
+    background: #8871b3;
+    border-color: #8871b3;
 }
 
 .callout-content h4 {
-    color: #5a4b7c;
+    color: #3d2f5c;
     font-size: 1.125rem;
     font-weight: 600;
     margin-bottom: 0.5rem;
@@ -1329,7 +1342,7 @@ div.summary-output div.output-content#summaryWorksheetOutput {
 }
 
 .callout-content h5 {
-    color: #5a4b7c;
+    color: #3d2f5c;
     font-size: 1rem;
     font-weight: 600;
     margin: 1.5rem 0 0.75rem 0;
@@ -1366,7 +1379,7 @@ div.summary-output div.output-content#summaryWorksheetOutput {
 }
 
 .faq-item:hover {
-    border-color: #b19cd9;
+    border-color: #8b6fb8;
 }
 
 .faq-question {
@@ -1392,7 +1405,7 @@ div.summary-output div.output-content#summaryWorksheetOutput {
 }
 
 .faq-question i {
-    color: #b19cd9;
+    color: #8b6fb8;
     font-size: 0.875rem;
     transition: transform 0.3s ease;
 }
@@ -1414,7 +1427,7 @@ div.summary-output div.output-content#summaryWorksheetOutput {
 
 .faq-answer p {
     margin: 0;
-    color: #5a4b7c;
+    color: #3d2f5c;
     line-height: 1.5;
     font-size: 0.9rem;
 }
@@ -1431,7 +1444,7 @@ div.summary-output div.output-content#summaryWorksheetOutput {
 }
 
 .generate-button {
-    background: #b19cd9;
+    background: #8b6fb8;
     color: white;
     border: none;
     padding: 1rem 2rem;
@@ -1448,7 +1461,7 @@ div.summary-output div.output-content#summaryWorksheetOutput {
 }
 
 .generate-button:hover {
-    background: #a991d3;
+    background: #8871b3;
     transform: translateY(-1px);
     box-shadow: 0 6px 16px rgba(181, 156, 217, 0.25);
 }
@@ -1520,12 +1533,12 @@ div.summary-output div.output-content#summaryWorksheetOutput {
 
 .regenerate-button {
     background: transparent;
-    color: #b19cd9;
-    border: 2px solid #b19cd9;
+    color: #8b6fb8;
+    border: 2px solid #8b6fb8;
 }
 
 .regenerate-button:hover {
-    background: #b19cd9;
+    background: #8b6fb8;
     color: white;
     transform: translateY(-1px);
 }
@@ -1558,19 +1571,19 @@ div.summary-output div.output-content#summaryWorksheetOutput {
 }
 
 .nav-button.prev:hover {
-    border-color: #b19cd9;
-    color: #b19cd9;
+    border-color: #8b6fb8;
+    color: #8b6fb8;
 }
 
 .nav-button.next {
-    background: #b19cd9;
+    background: #8b6fb8;
     color: white;
     border: none;
     margin-left: auto;
 }
 
 .nav-button.next:hover {
-    background: #a991d3;
+    background: #8871b3;
     transform: translateY(-1px);
     box-shadow: 0 5px 15px rgba(181, 156, 217, 0.3);
 }
@@ -1600,7 +1613,7 @@ div.summary-output div.output-content#summaryWorksheetOutput {
 .download-icon {
     width: 80px;
     height: 80px;
-    background: #b19cd9;
+    background: #8b6fb8;
     border-radius: 50%;
     display: flex;
     align-items: center;
@@ -1622,7 +1635,7 @@ div.summary-output div.output-content#summaryWorksheetOutput {
 }
 
 .download-button {
-    background: #b19cd9;
+    background: #8b6fb8;
     color: white;
     text-decoration: none;
     padding: 1rem 2rem;
@@ -1635,7 +1648,7 @@ div.summary-output div.output-content#summaryWorksheetOutput {
 }
 
 .download-button:hover {
-    background: #a991d3;
+    background: #8871b3;
     transform: translateY(-1px);
     box-shadow: 0 6px 16px rgba(181, 156, 217, 0.25);
 }
@@ -1657,7 +1670,7 @@ div.summary-output div.output-content#summaryWorksheetOutput {
 .instruction-number {
     width: 40px;
     height: 40px;
-    background: #b19cd9;
+    background: #8b6fb8;
     color: white;
     border-radius: 50%;
     display: flex;
@@ -1756,12 +1769,12 @@ div.summary-output div.output-content#summaryWorksheetOutput {
 
 .video-placeholder i {
     font-size: 4rem;
-    color: #b19cd9;
+    color: #8b6fb8;
     margin-bottom: 1rem;
 }
 
 .play-button {
-    background: #b19cd9;
+    background: #8b6fb8;
     color: white;
     border: none;
     padding: 1rem 2rem;
@@ -1773,7 +1786,7 @@ div.summary-output div.output-content#summaryWorksheetOutput {
 }
 
 .play-button:hover {
-    background: #a991d3;
+    background: #8871b3;
     transform: translateY(-1px);
     box-shadow: 0 6px 16px rgba(181, 156, 217, 0.25);
 }
@@ -1829,7 +1842,7 @@ div.summary-output div.output-content#summaryWorksheetOutput {
 }
 
 .remind-button {
-    background: #b19cd9;
+    background: #8b6fb8;
     color: white;
     border: none;
     padding: 0.5rem 1rem;
@@ -1841,7 +1854,7 @@ div.summary-output div.output-content#summaryWorksheetOutput {
 }
 
 .remind-button:hover {
-    background: #a991d3;
+    background: #8871b3;
 }
 
 .hashtag-suggestions {
@@ -1867,7 +1880,7 @@ div.summary-output div.output-content#summaryWorksheetOutput {
 }
 
 .success-card {
-    background: #b19cd9;
+    background: #8b6fb8;
     color: white;
     padding: 3rem;
     border-radius: 20px;
@@ -2236,7 +2249,7 @@ div.summary-output div.output-content#summaryWorksheetOutput {
 }
 
 .image-category h4 {
-    color: #5a4b7c;
+    color: #3d2f5c;
     font-size: 1.125rem;
     font-weight: 600;
     margin-bottom: 1rem;
@@ -2248,7 +2261,7 @@ div.summary-output div.output-content#summaryWorksheetOutput {
     align-items: center;
     gap: 0.5rem;
     background: #f8f7fc;
-    color: #5a4b7c;
+    color: #3d2f5c;
     padding: 0.5rem 0.75rem;
     border-radius: 20px;
     font-size: 0.875rem;
@@ -2296,12 +2309,12 @@ div.summary-output div.output-content#summaryWorksheetOutput {
 }
 
 .checkbox-item:hover input ~ .checkmark {
-    border-color: #b19cd9;
+    border-color: #8b6fb8;
 }
 
 .checkbox-item input:checked ~ .checkmark {
-    background-color: #b19cd9;
-    border-color: #b19cd9;
+    background-color: #8b6fb8;
+    border-color: #8b6fb8;
 }
 
 .checkmark:after {
@@ -2364,7 +2377,7 @@ div.summary-output div.output-content#summaryWorksheetOutput {
 }
 
 .disclaimer strong {
-    color: #5a4b7c;
+    color: #3d2f5c;
     font-weight: 600;
 }
 

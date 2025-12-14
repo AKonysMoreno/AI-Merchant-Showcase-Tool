@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="AI-powered tool for Shopify partners to create merchant showcase content using smart prompts and Figma templates for LinkedIn posting.">
-    <title>AI Merchant Showcase Tool</title>
+    <title>Create a merchant micro-story for LinkedIn</title>
     <link rel="stylesheet" href="styles.css">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
@@ -13,7 +13,8 @@
     <div class="container">
         <!-- Main Title -->
         <div class="title-container">
-            <h1>AI Merchant Showcase Tool</h1>
+            <p class="eyebrow">A SELF-SERVE TOOL FOR SHOPIFY PARTNERS</p>
+            <h1>Create a merchant micro-story for LinkedIn</h1>
         </div>
 
         <!-- Progress Bar -->
@@ -45,6 +46,10 @@
                             <span>Quote</span>
                         </div>
                         <div class="substep" data-substep="2d" onclick="goToSubstep('2d')">
+                            <i class="fas fa-chart-line"></i>
+                            <span>Metrics</span>
+                        </div>
+                        <div class="substep" data-substep="2e" onclick="goToSubstep('2e')">
                             <i class="fas fa-images"></i>
                             <span>Images</span>
                         </div>
@@ -70,13 +75,9 @@
                             <h2 class="main-heading">Get oriented</h2>
                             <div class="heading-underline"></div>
                             <div class="organized-description">
-                                <p>Case studies are a top request from Shopify partners, and for good reason! They're a great way to show your value in working with Shopify merchants. But case studies also take a bit of time to build, and sometimes you need social proof faster.</p>
+                                <p>This merchant micro-story tool makes it easy to create bite-sized content that highlights the value of your work with Shopify merchants, using the same key details as a full case study.</p>
                                 
-                                <p>That's where this <strong>merchant showcase tool</strong> comes in.</p>
-                                
-                                <p>This tool is a low-lift way to build content that shows the value of your work with merchants on Shopify. It includes the same impactful value points and details about the work you did as a full case study, but in a more bite-sized format.</p>
-                                
-                                <p><i class="fas fa-share-alt"></i> The output is a social post featuring a carousel of polished content cards you can promote through LinkedIn.</p>
+                                <p>⭐ <strong>The output is a social post featuring a carousel of polished content cards you can promote through LinkedIn.</strong></p>
                                 
                                 <div class="disclaimer">
                                     <p><strong>Disclaimer:</strong> This tool is here to help, but you're responsible for what you create. Review all prompts and case studies for accuracy. Shopify provides this tool as-is and makes no guarantees about the prompts or the final content you generate. Make sure you have your merchant's approval of your content before posting.</p>
@@ -187,32 +188,35 @@
                         <div class="substep-icon">
                             <i class="fas fa-heading"></i>
                         </div>
-                        <h3>Write your title</h3>
-                        <p>Generate a compelling headline about the merchant's success.</p>
+                        <h3>Write the title</h3>
                     </div>
 
                     <div class="substep-button" onclick="goToSubstep('2b')">
                         <div class="substep-icon">
                             <i class="fas fa-align-left"></i>
                         </div>
-                        <h3>Write your summary</h3>
-                        <p>Create a summary of your work and impact.</p>
+                        <h3>Summarize the story</h3>
                     </div>
 
                     <div class="substep-button" onclick="goToSubstep('2c')">
                         <div class="substep-icon">
                             <i class="fas fa-quote-right"></i>
                         </div>
-                        <h3>Check your quote's length</h3>
-                        <p>Make sure your merchant quote fits the template.</p>
+                        <h3>Check the quote's length</h3>
                     </div>
 
                     <div class="substep-button" onclick="goToSubstep('2d')">
                         <div class="substep-icon">
+                            <i class="fas fa-chart-line"></i>
+                        </div>
+                        <h3>Source the metrics</h3>
+                    </div>
+
+                    <div class="substep-button" onclick="goToSubstep('2e')">
+                        <div class="substep-icon">
                             <i class="fas fa-images"></i>
                         </div>
-                        <h3>Images</h3>
-                        <p>Gather the images you'll need for the template.</p>
+                        <h3>Gather the images</h3>
                     </div>
                 </div>
 
@@ -231,9 +235,9 @@
         <div class="step-content" id="step2a">
             <div class="content-section">
                 <div class="step-header-organized">
-                    <h2 class="main-heading">Write your title</h2>
+                    <h2 class="main-heading">Write the title</h2>
                     <div class="heading-underline"></div>
-                    <p class="organized-description">Start by drafting a title that describes what the partnership was about. Complete the two actions below.</p>
+                    <p class="organized-description">Draft a title that describes what the partnership was about. Complete the two actions below.</p>
                 </div>
 
                 <!-- Action 1: AI Prompt -->
@@ -315,7 +319,7 @@ When you understand, say "Please input the information about working with the me
                         <i class="fas fa-arrow-left"></i> Back to content options
                     </button>
                     <button class="nav-button next" onclick="goToSubstep('2b')">
-                        Next: Write your summary <i class="fas fa-arrow-right"></i>
+                        Write the summary <i class="fas fa-arrow-right"></i>
                     </button>
                 </div>
             </div>
@@ -325,9 +329,9 @@ When you understand, say "Please input the information about working with the me
         <div class="step-content" id="step2b">
             <div class="content-section">
                 <div class="step-header-organized">
-                    <h2 class="main-heading">Write your summary</h2>
+                    <h2 class="main-heading">Write the summary</h2>
                     <div class="heading-underline"></div>
-                    <p class="organized-description">Next, draft a summary of the work you did with the merchant on Shopify and how it created value for them. Complete the two actions below.</p>
+                    <p class="organized-description">Draft a summary of the work you did with the merchant on Shopify and how it created value for them. Complete the two actions below.</p>
                 </div>
 
                 <!-- Action 1: AI Prompt -->
@@ -412,7 +416,7 @@ When you understand, say "Please input the information about working with the me
                         <i class="fas fa-arrow-left"></i> Back
                     </button>
                     <button class="nav-button next" onclick="goToSubstep('2c')">
-                        Next: Check your quote <i class="fas fa-arrow-right"></i>
+                        Check the quote <i class="fas fa-arrow-right"></i>
                     </button>
                 </div>
             </div>
@@ -424,7 +428,7 @@ When you understand, say "Please input the information about working with the me
                 <div class="step-header-organized">
                     <h2 class="main-heading">Check your quote's length</h2>
                     <div class="heading-underline"></div>
-                    <p class="organized-description">Make sure your merchant quote fits within the character limits for the template design.</p>
+                    <p class="organized-description">Gather a direct quote from the merchant about the value of working with them on Shopify. Make sure it fits within the character limits for the template design.</p>
                 </div>
 
                 <div class="quote-checker">
@@ -459,19 +463,56 @@ When you understand, say "Please input the information about working with the me
                         <i class="fas fa-arrow-left"></i> Back
                     </button>
                     <button class="nav-button next" onclick="goToSubstep('2d')">
-                        Next: Gather images <i class="fas fa-arrow-right"></i>
+                        Source the metrics <i class="fas fa-arrow-right"></i>
                     </button>
                 </div>
             </div>
         </div>
 
-        <!-- Step 2d: Gather Images -->
+        <!-- Step 2d: Source the Metrics -->
         <div class="step-content" id="step2d">
             <div class="content-section">
                 <div class="step-header-organized">
-                    <h2 class="main-heading">Gather your images</h2>
+                    <h2 class="main-heading">Source the metrics</h2>
                     <div class="heading-underline"></div>
-                    <p class="organized-description">You'll need to add a few images to the design template. Gather these now so you're ready to drop them in when the time comes:</p>
+                    <p class="organized-description">A compelling micro-story needs to include metrics that show how your work helped the merchant grow on Shopify. The template has space for up to three, though one is the minimum.</p>
+                </div>
+
+                <div class="tip-section">
+                    <h4>Examples of strong metrics:</h4>
+                    <ul>
+                        <li>28% increase in revenue</li>
+                        <li>225% growth in site traffic</li>
+                        <li>87% more site visitors</li>
+                    </ul>
+                </div>
+
+                <div class="checklist-items" style="margin-top: 1.5rem;">
+                    <label class="checkbox-item">
+                        <input type="checkbox" id="metricsConfirm">
+                        <span class="checkmark"></span>
+                        <span class="checkbox-label">I've sourced at least one metric that shows how my work helped the merchant grow on Shopify.</span>
+                    </label>
+                </div>
+
+                <div class="step-navigation">
+                    <button class="nav-button prev" onclick="goToSubstep('2c')">
+                        <i class="fas fa-arrow-left"></i> Back
+                    </button>
+                    <button class="nav-button next" onclick="goToSubstep('2e')">
+                        Gather the images <i class="fas fa-arrow-right"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Step 2e: Gather Images -->
+        <div class="step-content" id="step2e">
+            <div class="content-section">
+                <div class="step-header-organized">
+                    <h2 class="main-heading">Gather the images</h2>
+                    <div class="heading-underline"></div>
+                    <p class="organized-description">You'll need to add a few images to the design template. Gather these now so you're ready to drop them into the template later.</p>
                 </div>
 
                 <div class="images-checklist">
@@ -523,7 +564,7 @@ When you understand, say "Please input the information about working with the me
                 </div>
 
                 <div class="step-navigation">
-                    <button class="nav-button prev" onclick="goToSubstep('2c')">
+                    <button class="nav-button prev" onclick="goToSubstep('2d')">
                         <i class="fas fa-arrow-left"></i> Back
                     </button>
                     <button class="nav-button next" onclick="nextStep()">
@@ -539,7 +580,7 @@ When you understand, say "Please input the information about working with the me
                 <div class="step-header-organized">
                     <h2 class="main-heading priority-heading">Design your content</h2>
                     <div class="heading-underline"></div>
-                    <p class="organized-description priority-description">Now it's time to put your copy into the design template using Figma.<br><br>The template is built so that all you need to do is copy and paste the content you just generated, then add your metrics and images directly into the template. From there, you'll export and post to LinkedIn.</p>
+                    <p class="organized-description priority-description">Now input your copy into the design template using Figma.<br><br>Simply copy and paste the content you just generated, then add your metrics and images directly into the template. From there, you'll export and post to LinkedIn.</p>
                 </div>
 
                 <!-- Figma Callout Box -->
@@ -669,7 +710,7 @@ Applying what you've learned from these examples, take the earlier input for "Wh
                     </div>
                     
                     <div class="completion-content">
-                        <p class="completion-message">You've successfully created merchant showcase content using AI and Figma!</p>
+                        <p class="completion-message">You've successfully created a merchant micro-story post using AI and Figma!</p>
                     </div>
 
                     <div class="completion-actions">

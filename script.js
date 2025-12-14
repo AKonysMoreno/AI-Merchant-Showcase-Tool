@@ -310,6 +310,9 @@ function nextStep() {
                 goToSubstep('2d');
                 return;
             } else if (currentSubstep === '2d') {
+                goToSubstep('2e');
+                return;
+            } else if (currentSubstep === '2e') {
                 // Move to next main step
                 currentSubstep = null;
                 currentStep = 3;
@@ -348,6 +351,9 @@ function prevStep() {
                 return;
             } else if (currentSubstep === '2d') {
                 goToSubstep('2c');
+                return;
+            } else if (currentSubstep === '2e') {
+                goToSubstep('2d');
                 return;
             } else if (currentSubstep === '2a') {
                 // Go back to main step 2 overview
@@ -1115,7 +1121,7 @@ function showStep(step) {
 function checkRequiredElements() {
     const requiredElements = [
         'progressFill',
-        'step1', 'step2', 'step2a', 'step2b', 'step2c', 'step2d', 'step3', 'step4', 'step5'
+        'step1', 'step2', 'step2a', 'step2b', 'step2c', 'step2d', 'step2e', 'step3', 'step4', 'step5'
     ];
     
     const missingElements = [];
