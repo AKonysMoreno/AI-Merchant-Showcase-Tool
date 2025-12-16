@@ -423,7 +423,9 @@ function updateProgressBar() {
     try {
         const progressFill = document.getElementById('progressFill');
         if (progressFill) {
-            const progressPercent = (currentStep / 5) * 100;
+            // Use 4 as the total since there are 4 visible steps (step 5 is completion screen)
+            const totalVisibleSteps = 4;
+            const progressPercent = (Math.min(currentStep, totalVisibleSteps) / totalVisibleSteps) * 100;
             progressFill.style.width = `${progressPercent}%`;
         }
     } catch (error) {
@@ -1093,6 +1095,7 @@ function showStep(step) {
     
     // Reset substep when changing main steps
     if (typeof step === 'number') {
+        currentStep = step;  // Update currentStep
         currentSubstep = null;
         
         // Show current step
@@ -1113,6 +1116,7 @@ function showStep(step) {
             populateHashtagSuggestions();
         }
         
+        updateProgressBar();  // Update the progress bar
         updateSubstepIndicators();
     }
 }
